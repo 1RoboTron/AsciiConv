@@ -23,5 +23,6 @@ By the way, my project is on [AUR](https://aur.archlinux.org/packages/asciiconv)
 
 Example, My Avatar
 
-![image](https://github.com/user-attachments/assets/20205f0c-0698-486b-9197-766a0bc711f2)
+![20250122_18h55m16s_grim](https://github.com/user-attachments/assets/07230c13-bd14-46ec-ac83-7163b107b773)
+
 
