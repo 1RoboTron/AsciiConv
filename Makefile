@@ -5,7 +5,7 @@ SCRIPT_DIR = ./.make
 
 all: asciiconv
 
-asciiconv:
+asciiconv: clean
 	@sh -c $(SCRIPT_DIR)/1.sh || sh -c $(SCRIPT_DIR)/2.sh || (echo "Installing Error!!!." && exit 1)
 
 install: asciiconv

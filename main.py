@@ -40,7 +40,7 @@ def main():
         width, height = map(float, args.size.split(','))
         width, height = round(width), round(height)
     else:
-        width = original_width // 4
+        width = original_width // 3 # 4 устарел если честно
         height = original_height // 4
 
     if args.divide:
