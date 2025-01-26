@@ -9,7 +9,7 @@ asciiconv: clean
 	@sh -c $(SCRIPT_DIR)/1.sh || sh -c $(SCRIPT_DIR)/2.sh || (echo "Installing Error!!!." && exit 1)
 
 install: asciiconv
-	@mv asciigen $(BIN_DIR)/
+	@mv asciiconv $(BIN_DIR)/
 
 uninstall: clean
 	@rm -f $(BIN_DIR)/asciiconv
