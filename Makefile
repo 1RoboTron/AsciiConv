@@ -5,11 +5,12 @@ SCRIPT_DIR = ./.make
 
 all: asciiconv
 
-asciiconv: clean 
-	@python3 -m venv venv && source venv/bin/activate
-	@pip3 install PyInstaller Pillow
-	@python3 -m PyInstaller main.py --onefile
-	@mv ./dist/main ./asciiconv
+asciiconv: clean
+	@python3 -m venv venv && \
+	venv/bin/pip3 install PyInstaller Pillow && \
+	venv/bin/python3 -m PyInstaller main.py --onefile && \
+	mv ./dist/main ./asciiconv
+
 install: asciiconv
 	@mv asciiconv $(BIN_DIR)/
 
