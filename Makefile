@@ -7,7 +7,7 @@ all: asciiconv
 
 asciiconv: clean 
 	@python3 -m venv venv && source venv/bin/activate
-	@pip install PyInstaller Pillow
+	@pip3 install PyInstaller Pillow
 	@python3 -m PyInstaller main.py --onefile
 	@mv ./dist/main ./asciiconv
 install: asciiconv
