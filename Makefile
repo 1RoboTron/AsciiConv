@@ -5,9 +5,11 @@ SCRIPT_DIR = ./.make
 
 all: asciiconv
 
-asciiconv: clean
-	@sh -c $(SCRIPT_DIR)/1.sh || sh -c $(SCRIPT_DIR)/2.sh || (echo "Installing Error!!!." && exit 1)
-
+asciiconv: clean 
+	@python3 -m venv venv && source venv/bin/activate
+	@pip install PyInstaller Pillow
+	@python3 -m PyInstaller main.py --onefile
+	@mv ./dist/main ./asciiconv
 install: asciiconv
 	@mv asciiconv $(BIN_DIR)/
 
@@ -15,4 +17,4 @@ uninstall: clean
 	@rm -f $(BIN_DIR)/asciiconv
 
 clean:
-	@rm -rf build dist __pycache__ asciiconv.spec asciiconv venv
+	@rm -rf build dist __pycache__ main.spec asciiconv venv
