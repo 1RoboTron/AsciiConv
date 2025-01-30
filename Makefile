@@ -1,7 +1,6 @@
 .PHONY: all install uninstall clean
 
 BIN_DIR = /usr/local/bin
-SCRIPT_DIR = ./.make
 
 all: asciiconv
 
